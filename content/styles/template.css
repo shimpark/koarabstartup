@@ -20,8 +20,8 @@ body {
     position: relative;
     margin: 0 auto;
 }
-.grid1170 {
-    max-width: 1170px;
+.grid1100 {
+    max-width: 1100px;
 }
 .grid720 {
     max-width: 720px;
@@ -31,7 +31,7 @@ body {
     html {
         font-size: 112.5%; /* 18px */
     }
-    .grid1170 {
+    .grid1100 {
         margin-left: 20px;
         margin-right: 20px;
     }
@@ -942,14 +942,8 @@ color palatte
 .fc-white {
     color: #fff !important;
 }
-.fc-red {
-    color: #da1e31 !important;
-}
-.fc-lightgrey {
-    color: #999 !important;
-}
-.fc-grey {
-    color: #666 !important;
+.fc-green {
+    color: #12483b !important;
 }
 .fc-black {
     color: #111 !important;
@@ -959,11 +953,8 @@ color palatte
 .white {
     background-color: #fff !important;
 }
-.red {
-    background-color: #da1e31 !important;
-}
-.lightyellow {
-    background-color: #fcf7e6 !important;
+.green {
+    background-color: #12483b !important;
 }
 .black {
     background-color: #2f2f2f !important;
@@ -1067,26 +1058,32 @@ movie
 tab menu
 ============================================================*/
 .tab-menu-list {
-    padding-bottom: 4rem;
+    padding-bottom: 3.5rem;
+}
+.tab-menu-list li {
+    width: 33.33%;
+    border: 1px solid #13493b;
+}
+.tab-menu-list li + li {
+    border-left: 0;
 }
 .tab-menu {
     display: block;
     padding: 1rem 0;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-align: center;
-    color: #acacac;
-    background-color: #2f2f2f;
-    border-bottom: 2px solid #2f2f2f;
+    color: #5e7972;
+    background-color: #fff;
 }
 .tab-menu.active {
-    color: #da1e31;
-    background-color: transparent;
-    border-color: #da1e31;
+    font-weight: 700;
+    color: #10483b;
+    background-color: #daecd2;
 }
 
 @media (max-width: 575.98px) {
     .tab-menu {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 }
 
@@ -1101,23 +1098,20 @@ pagination
 }
 /* button type
 ============================================================*/
-.pagination__btn {
-    justify-content: space-between;
-}
 [class^="paging-btn__"] {
     display: inline-block;
     position: relative;
     padding: 1.25rem 0;
     font-size: 1rem;
     text-align: center;
-    border: 1px solid #da1e31;
+    border: 1px solid #12483b;
 }
 .paging-btn__primary {
     color: #fff;
-    background-color: #da1e31;
+    background-color: #12483b;
 }
 .paging-btn__secondary {
-    color: #da1e31;
+    color: #12483b;
     background-color: #fff;
 }
 
@@ -1147,7 +1141,7 @@ pagination
 }
 .paging-idx.active {
     color: #fff;
-    background-color: #da1e31;
+    background-color: #12483b;
 }
 [class^="paging-arw"] {
     display: inline-block;
@@ -1310,7 +1304,7 @@ data view
 .data-view-hd {
     padding: 3rem 0;
     text-align: center;
-    border-top: 2px solid #da1e31;
+    border-top: 2px solid #12483b;
 }
 .data-view-hd .tit {
     font-weight: 500;
@@ -1351,8 +1345,8 @@ data view
 
 @media screen and (min-width: 1380px) {
     .data-view-file .file:hover {
-        color: #da1e31;
-        border-bottom: 1px solid #da1e31;
+        color: #12483b;
+        border-bottom: 1px solid #12483b;
     }
 }
 @media screen and (max-width: 575.98px) {
@@ -1371,8 +1365,8 @@ data view
         font-size: 1.2rem;
     }
     .data-view-file .file {
-        color: #da1e31;
-        border-bottom: 1px solid #da1e31;
+        color: #12483b;
+        border-bottom: 1px solid #12483b;
     }
 }
 
@@ -1382,32 +1376,58 @@ faq
 .faq-list {
     border-bottom: 1px solid #d9d9d9;
 }
-.faq-list-tit {
+.faq-list-tit-box {
     display: block;
-    padding: 2rem 6rem 2rem 2rem;
+    position: relative;
+    padding: 1.5rem 6rem 1.5rem 3rem;
     width: 100%;
-    font-size: 1.3rem;
-    line-height: 1.25;
-    text-align: left;
     border-top: 1px solid #d9d9d9;
     -webkit-tap-highlight-color: transparent;
-    background-repeat: no-repeat;
-    background-position: center right 2rem;
-    background-size: 0.9rem;
-    background-color: transparent;
-    background-image: url("../images/common/faq-unfold-arw.png");
     cursor: pointer;
 }
-.faq-list-tit.active {
-    color: #da1e31;
-    background-image: url("../images/common/faq-fold-arw.png");
+.faq-list-tit-box::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 2rem;
+    height: 2rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-image: url("../images/common/toggle-item-fold-arrow.png");
+    opacity: 0.3;
+}
+.faq-list-tit-box.active::after {
+    background-image: url("../images/common/toggle-item-unfold-arrow.png");
+}
+.faq-list-tit {
+    display: block;
+    position: relative;
+    padding-left: 2rem;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.25;
+    text-align: left;
+}
+.active .faq-list-tit {
+    color: #12483b;
+}
+.faq-list-tit .idx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: 500;
+    color: #12483b;
 }
 .faq-list-txt {
     display: none;
-    padding: 2rem;
+    padding: 2rem 3rem 2rem 5rem;
     font-size: 0.9rem;
     line-height: 1.7;
-    background-color: #f5f5f5;
+    background-color: #f7f7f7;
 }
 
 @media (max-width: 575.98px) {
@@ -1613,7 +1633,7 @@ form
 }
 .form-chk__rect input:checked + .form-chk-label::before,
 .form-chk__circ input:checked + .form-chk-label::before {
-    background-color: #da1e31;
+    background-color: #12483b;
 }
 .form-chk__btn .form-chk-label {
     display: block;
@@ -1622,16 +1642,16 @@ form
     border: 1px solid #d9d9d9;
 }
 .form-chk__btn input:checked + .form-chk-label {
-    color: #da1e31;
-    border-color: #da1e31;
+    color: #12483b;
+    border-color: #12483b;
 }
 [class^="form-btn__"] {
     display: inline-block;
     font-size: 0.8rem;
     text-align: center;
-    color: #da1e31;
+    color: #12483b;
     background-color: #fff;
-    border: 1px solid #da1e31;
+    border: 1px solid #12483b;
 }
 .form-btn__sm {
     width: 5rem;
@@ -1648,9 +1668,9 @@ form
     font-size: 0.8rem;
     line-height: 3rem;
     text-align: center;
-    color: #da1e31;
+    color: #12483b;
     background-color: #fff;
-    border: 1px solid #da1e31;
+    border: 1px solid #12483b;
 }
 .form-file {
     position: absolute;

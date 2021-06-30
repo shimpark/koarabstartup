@@ -32,6 +32,12 @@ function closeBackmodal() {
     });
 }
 
+//main show&hide language content
+function showLangCont(thisLang) {
+    $("[class^='lang-cont__']").hide();
+    $(".lang-cont__" + thisLang).show();
+}
+
 //textarea counter event
 function txtCounter() {
     $(".keyup1000").on("keyup", function() {
@@ -61,4 +67,28 @@ function deleteFile(thisFile) {
     if($(".form-file-list").find("li").length < 1) {
         $(".form-file-list").remove();
     }
+}
+
+//faq list event
+function tglFaq() {
+    var faqTit = $(".faq-list-tit-box");
+    var faqCont = $(".faq-list-txt");
+
+    faqTit.on("click", function(){
+        faqTit.not($(this)).removeClass("active");
+        $(this).toggleClass("active");
+
+        faqCont.not($(this).next(faqCont)).slideUp(250);
+        $(this).next(faqCont).slideToggle(250);
+    });
+}
+
+//tab content event
+function showTabCont(thisTabContVal) {
+    var thisTabCont = $(".tab-cont__" + thisTabContVal);
+
+    $("[class^='tab-cont__']").not(thisTabCont).hide();
+    thisTabCont.show();
+
+    return false;
 }

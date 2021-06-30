@@ -40,6 +40,9 @@ main, article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+figure {
+    font-size: 0;
+}
 ol, ul {
 	list-style: none;
 }
