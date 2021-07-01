@@ -807,26 +807,11 @@ font style
 .fs30 {
     font-size: 1.5rem;
 }
-.fs26 {
-    font-size: 1.3rem;
-}
-.fs24 {
-    font-size: 1.2rem;
-}
-.fs22 {
-    font-size: 1.1rem;
-}
 .fs20 {
     font-size: 1rem;
 }
 .fs18 {
     font-size: 0.9rem;
-}
-.fs16 {
-    font-size: 0.8rem;
-}
-.fs14 {
-    font-size: 0.7rem;
 }
 
 @media screen and (max-width: 575.98px) {
@@ -836,26 +821,11 @@ font style
     .fs30 {
         font-size: 1.8rem;
     }
-    .fs26 {
-        font-size: 1.6rem;
-    }
-    .fs24 {
-        font-size: 1.5rem;
-    }
-    .fs22 {
-        font-size: 1.4rem;
-    }
     .fs20 {
         font-size: 1.3rem;
     }
     .fs18 {
         font-size: 1.2rem;
-    }
-    .fs16 {
-        font-size: 1.1rem;
-    }
-    .fs14 {
-        font-size: 1rem;
     }
 }
 /* text align
@@ -1009,6 +979,7 @@ body.full {
 }
 .modal-wrap__rlt {
     margin: 10rem auto;
+    max-width: 580px;
 }
 .modal-wrap__abs {
     position: absolute;
@@ -1016,9 +987,19 @@ body.full {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    width: 580px;
 }
 [class^="modal-wrap__"] > .close-modal-btn {
     position: absolute;
+    top: -1.5rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 3rem;
+    height: 3rem;
+    background-color: #12483b;
+    border-radius: 100%;
+    box-shadow: 0 5px 0 rgba(0, 0, 0, 0.2);
 }
 [class^="modal-wrap__"] > .close-modal-btn::before,
 [class^="modal-wrap__"] > .close-modal-btn::after {
@@ -1026,6 +1007,9 @@ body.full {
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 2px;
+    height: 1.5rem;
+    background-color: #fff;
 }
 [class^="modal-wrap__"] > .close-modal-btn::before {
     -webkit-transform: translate(-50%, -50%) rotate(45deg);
@@ -1034,6 +1018,62 @@ body.full {
 [class^="modal-wrap__"] > .close-modal-btn::after {
     -webkit-transform: translate(-50%, -50%) rotate(-45deg);
     transform: translate(-50%, -50%) rotate(-45deg);
+}
+.modal-hd {
+    padding: 2rem 2.5rem 1.5rem;
+    text-align: center;
+    background-color: #fff;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+}
+.modal-hd-greet {
+    position: relative;
+    padding-bottom: 4rem;
+}
+.modal-hd-greet::after {
+    content: "";
+    position: absolute;
+    top: 2.25rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 2px;
+    height: 2rem;
+    background-color: #b2b2b2;
+}
+.modal-hd-tit {
+    padding-top: 0.5rem;
+    line-height: 1.4;
+}
+.modal-hd-txt {
+    padding-top: 1rem;
+    line-height: 1.4;
+}
+.modal-cont {
+    padding: 2rem 2.5rem 3rem;
+    margin-top: -1px;
+    background-color: #f0f0f0;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+.modal-cont-tit {
+    line-height: 1.4;
+    text-align: center;
+}
+.modal-cont-txt {
+    line-height: 1.4;
+}
+.modal-btn-box {
+    text-align: center;
+}
+[class^="modal-btn__"] {
+    display: inline-block;
+}
+
+@media screen and (max-width: 580.98px) {
+    .modal-wrap__abs {
+        width: calc(100% - 40px);
+    }
 }
 
 /*============================================================
@@ -1744,6 +1784,7 @@ form
     }
     .form-chk__btn .form-chk-label {
         padding: 1.5rem 0;
+        line-height: 1.4;
     }
     .form-file {
         height: 4.5rem;

@@ -50,7 +50,19 @@ function txtCounter() {
                 counter.html("(1000/1000자)");
             }
     });
+
+    $(".keyupEng2000").on("keyup", function() {
+        var content = $(this).val();
+        var counter = $(this).next().find(".count");
+
+        counter.html(content.length + "/2000characters");
+            if (content.length > 2000){
+                $(this).val(content.substring(0, 2000));
+                counter.html("(2000/2000characters)");  
+            }
+    });
 }
+    
 
 //upload file name event
 function uploadFileName() {
