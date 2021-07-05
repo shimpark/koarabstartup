@@ -1,0 +1,166 @@
+@charset "utf-8";
+
+/*============================================================
+common content style
+============================================================*/
+section {
+    padding: 6.5rem 0;
+}
+figure {
+    position: relative;
+}
+.lang-cont__eng {
+    display: none;
+}
+/* button
+============================================================*/
+[class^="cmn-btn__"] {
+    display: inline-block;
+    position: absolute;
+    width: 5.9%;
+    /* background-color: rgba(255, 0, 0, 0.5); */
+}
+.cmn-btn__lang-kor {
+    right: 6.27%;
+}
+.cmn-btn__lang-eng {
+    right: 0;
+}
+
+/*============================================================
+header
+============================================================*/
+header {
+    background: url("../images/common/sub-visual-background.png") no-repeat center;
+}
+header [class^="cmn-btn__lang"] {
+    top: 7.73%;
+    height: 7.5%;
+}
+
+/*============================================================
+footer
+============================================================*/
+footer {
+    background-color: #eee;
+}
+.cmn-btn__footer {
+    top: 35.55%;
+    right: 0;
+    width: 20.91%;
+    height: 30%;
+}
+
+/*============================================================
+main
+============================================================*/
+/* visual
+============================================================*/
+.vsl-area {
+    background: url("../images/common/visual-background.png") no-repeat center bottom;
+    background-size: cover;
+}
+.vsl-area [class^="cmn-btn__lang"] {
+    top: 2.15%;
+    height: 2.5%;
+}
+/* intro
+============================================================*/
+.intro-area {
+    background-color: #12483b;
+}
+/* .intro-area [class^="cmn-btn__"] {
+    width: 34.1%;
+}
+ .cmn-btn__homepage {
+    left: 15.18%;
+}
+.cmn-btn__download {
+    left: 50.36%;
+} 0705 zoe 삭제 */
+
+/* 0705 zoe 수정 및 추가 시작 */
+.intro-area .lang-cont__kor [class^="cmn-btn__"] {
+    width: 34.1%;
+    top: 50.83%;
+    height: 21%;
+}
+.intro-area .lang-cont__kor .cmn-btn__homepage {
+    left: 15.18%;
+}
+.intro-area .lang-cont__kor .cmn-btn__download {
+    left: 50.36%;
+}
+.intro-area .lang-cont__eng [class^="cmn-btn__"] {
+    top: 60.31%;
+    left: 31.5%;
+    width: 37%;
+    height: 17.64%;
+}
+/* 0705 zoe 수정 및 추가 끝 */
+
+/* content
+============================================================*/
+.cont-area {
+    padding: 7rem 0 6.5rem;
+}
+.cmn-btn__apply {
+    bottom: 0;
+    left: 31.1%;
+    width: 37.73%;
+}
+.lang-cont__kor .cmn-btn__apply {
+    height: 2.4%;
+}
+.lang-cont__eng .cmn-btn__apply {
+    height: 1.73%;
+}
+[class^="tab-cont__"] {
+    display: none;
+}
+/* login modal
+============================================================*/
+[class^="modal-btn__login"] {
+    margin-top: 0.5rem;
+    min-width: 18rem;
+}
+[class^="modal-btn__login"] .label {
+    display: inline-block;
+    padding: 1.25rem 0 1.25rem 2rem;
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: 1.5rem;
+}
+.modal-btn__login-kakao {
+    background-color: #ffdd00;
+}
+.modal-btn__login-kakao .label {
+    color: #412e34;
+    background-image: url("../images/common/modal-login-kakao.png");
+}
+.modal-btn__login-naver {
+    background-color: #03c75a;
+}
+.modal-btn__login-naver .label {
+    color: #fff;
+    background-image: url("../images/common/modal-login-naver.png");
+}
+
+@media screen and (max-width: 575.98px) {
+    [class^="modal-btn__login"] {
+        margin-top: 1rem;
+        min-width: initial;
+        width: 100%;
+    }
+    [class^="modal-btn__login"] .label {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+}
+
+/*============================================================
+apply
+============================================================*/
+#inputNationality {
+    display: none;
+}
