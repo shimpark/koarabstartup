@@ -56,7 +56,7 @@ main
 ============================================================*/
 /* visual
 ============================================================*/
-.vsl-area { /* 0702 zoe 수정 */
+.vsl-area {
     background: url("../images/common/visual-background.png") no-repeat center bottom;
     background-size: cover;
 }
@@ -69,39 +69,50 @@ main
 .intro-area {
     background-color: #12483b;
 }
-.intro-area [class^="cmn-btn__"] { /* 0702 zoe 수정 */
+/* .intro-area [class^="cmn-btn__"] {
     width: 34.1%;
 }
-.cmn-btn__homepage {
+ .cmn-btn__homepage {
     left: 15.18%;
 }
 .cmn-btn__download {
     left: 50.36%;
-}
+} 0705 zoe 삭제 */
 
-.intro-area .lang-cont__kor [class^="cmn-btn__"] { /* 0702 zoe 추가 */
+/* 0705 zoe 수정 및 추가 시작 */
+.intro-area .lang-cont__kor [class^="cmn-btn__"] {
+    width: 34.1%;
     top: 50.83%;
     height: 21%;
 }
-.intro-area .lang-cont__eng [class^="cmn-btn__"] { /* 0702 zoe 추가 */
+.intro-area .lang-cont__kor .cmn-btn__homepage {
+    left: 15.18%;
+}
+.intro-area .lang-cont__kor .cmn-btn__download {
+    left: 50.36%;
+}
+.intro-area .lang-cont__eng [class^="cmn-btn__"] {
     top: 60.31%;
+    left: 31.5%;
+    width: 37%;
     height: 17.64%;
 }
+/* 0705 zoe 수정 및 추가 끝 */
 
 /* content
 ============================================================*/
 .cont-area {
     padding: 7rem 0 6.5rem;
 }
-.cmn-btn__apply { /* 0702 zoe 수정 */
+.cmn-btn__apply {
     bottom: 0;
     left: 31.1%;
     width: 37.73%;
 }
-.lang-cont__kor .cmn-btn__apply { /* 0702 zoe 추가 */
+.lang-cont__kor .cmn-btn__apply {
     height: 2.4%;
 }
-.lang-cont__eng .cmn-btn__apply { /* 0702 zoe 추가 */
+.lang-cont__eng .cmn-btn__apply {
     height: 1.73%;
 }
 [class^="tab-cont__"] {
