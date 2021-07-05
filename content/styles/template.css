@@ -915,6 +915,9 @@ color palatte
 .fc-green {
     color: #12483b !important;
 }
+.fc-grey { /* 0705 2차 zoe 수정 */
+    color: #666 !important;
+}
 .fc-black {
     color: #111 !important;
 }
