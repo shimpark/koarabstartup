@@ -69,17 +69,6 @@ main
 .intro-area {
     background-color: #12483b;
 }
-/* .intro-area [class^="cmn-btn__"] {
-    width: 34.1%;
-}
- .cmn-btn__homepage {
-    left: 15.18%;
-}
-.cmn-btn__download {
-    left: 50.36%;
-} 0705 zoe 삭제 */
-
-/* 0705 zoe 수정 및 추가 시작 */
 .intro-area .lang-cont__kor [class^="cmn-btn__"] {
     width: 34.1%;
     top: 50.83%;
@@ -97,7 +86,6 @@ main
     width: 37%;
     height: 17.64%;
 }
-/* 0705 zoe 수정 및 추가 끝 */
 
 /* content
 ============================================================*/
@@ -156,6 +144,41 @@ main
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
     }
+}
+/* notice modal (0910 zoe 추가)
+============================================================*/
+#modalNotice .modal-cont {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.modal-name-wrap {
+    padding-top: 2.5rem;
+}
+.modal-name-wrap dt {
+    position: relative;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+.modal-name-wrap dt::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 0.75rem;
+    height: 2px;
+    background-color: #12483b;
+}
+.modal-name-list li {
+    padding: 5px 0;
+    line-height: 1.4;
+}
+.modal-bnr {
+    overflow: hidden;
+    display: block;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
 }
 
 /*============================================================

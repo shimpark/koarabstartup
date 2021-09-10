@@ -505,6 +505,45 @@
         </div>
     </div>
     <!-- //login modal END -->
+    <!-- notice(winner) modal START (0910 zoe 추가) -->
+    <div class="modal-area" id="modalNotice">
+        <div class="modal-wrap__rlt">
+            <a href="javascript:void(0);" class="close-modal-btn" onclick="closeModal('modalNotice');"><span class="txt-hidden">공지 레이어 팝업 닫기</span></a>
+            <div class="modal-hd">
+                <h3 class="modal-hd-tit fs30">서류 합격 결과 발표</h3>
+            </div>
+            <div class="modal-cont txt-cnt">
+                <p class="modal-cont-txt fs18"><span class="txt-linebreak__mo">한-아랍 스타트업 공모전</span> 서류 전형 합격을 축하 드립니다.<br><span class="txt-linebreak__mo">합격자 분들에게는</span> 이후 진행 내용 및 일정 관련하여<br>개별적으로 연락드릴 예정입니다.<br><br>*팀명 / 대표자명 / 핸드폰번호 뒷 4자리</p>
+                <dl class="modal-name-wrap fs20">
+                    <dt class="fw700 fc-green">START-UP 부문</dt>
+                    <dd>
+                        <ul class="modal-name-list">
+                            <li>Lonely night / 권*표 / 1288</li>
+                            <li>주식회사 피엔피플래닝 / 백*영 / 9222</li>
+                            <li>실라서울 / 신*섭 / 8436</li>
+                            <li>올댓코리아 / 이*애 / 0617</li>
+                            <li>콜렉티브 / 이*아 / 0737</li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="modal-name-wrap fs20">
+                    <dt class="fw700 fc-green">IDEA 부문</dt>
+                    <dd>
+                        <ul class="modal-name-list">
+                            <li>3endy / Mo**b B***salman / 8338</li>
+                            <li>KALU / 김*석 / 1954</li>
+                            <li>낭랑 23세 / 박*연 / 2253</li>
+                            <li>야랍(yarab) / 방* / 2569</li>
+                            <li>ANTI-V / 정*규 / 063)</li>
+                        </ul>
+                    </dd>
+                </dl>
+                <p class="modal-cont-txt pt50 fs18"><span class="txt-linebreak">지원해주신 모든 분들께 진심으로 감사드리며,</span> 함께 하지 못하는 분들께 아쉬운 마음 전합니다.<br><span class="txt-linebreak">앞으로도 한-아랍 스타트업 아이디어 공모전에</span> 많은 관심 부탁드립니다.</p>
+            </div>
+            <a href="http://korea-arab.org/?c=user&mcd=sub02_02&me=bbs_detail&idx=23575&cur_page=1&sParam=" target="_blank" title="배너 이미지에 연결된 페이지로 이동 (새 창)" class="modal-bnr"><img src="../../content/images/common/modal-notice-banner.jpg" alt="배너 이미지"></a>
+        </div>
+    </div>
+    <!-- //notice(winner) modal END -->
 
     <script src="../../content/scripts/common.js"></script>
     <script>
@@ -527,6 +566,9 @@
 
             //close modal when click background
             closeBackmodal();
+
+            //open notice modal
+            openModal('modalNotice');
         });
     </script>
     <!-- Google Tag Manager (noscript) -->
